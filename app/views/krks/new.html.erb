@@ -1,0 +1,66 @@
+<h1>メロディマップ</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @krk do |f| %>
+
+  <div class="field">
+    <%= f.label :歌の名前 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ジャンル  %>
+    <%= f.select :genre, 
+    [["洋楽", "洋楽"], 
+    ["J-pop", "J-pop"], 
+    ["ラップ", "ラップ"],
+    ["k-pop", "k-pop"],
+    ["ロック", "ロック"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :自由（歌手の名前や歌いやすさや、どこで聞いたか等  %>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+<div class="krks-container">
+    <% @krks.each do |t| %>
+      <div class="krk">
+      <%= image_tag t.image_url, size: "10x10" if t.image? %>
+      <%= t.user.email %>
+        <%= t.name %>
+        <%= t.genre %>
+        <%= t.about %>
+
+        <% if user_signed_in? && current_user.id == t.user_id %>
+        <%= link_to "編集する", edit_krk_path(t.id) %>
+        <%= link_to "削除する", krk_path(t.id), method: :delete %>
+        <% end %> 
+      
+        <% if user_signed_in? %>
+          <% if current_user.already_liked?(t) %>
+              <%= link_to krk_like_path(id: t.id, krk_id: t.id), method: :delete do %>
+                <i class="fas fa-heart"></i><%= t.likes.count %>
+              <% end %>
+          <% else %>
+              <%= link_to krk_likes_path(id: t.id, krk_id: t.id), method: :post do %>
+                <i class="far fa-heart"></i><%= t.likes.count %>
+              <% end %>
+          <% end %>
+        <% else %>
+          <i class="far fa-heart"></i><%= t.likes.count %>
+        <% end %>
+        <%= t.created_at %>
+        <%= link_to "詳細へ", krk_path(t.id) %>
+        <%= link_to "編集する", edit_krk_path(t.id) %>
+        <%= button_to "削除する", krk_path(t.id), method: :delete %> 
+      </div>
+    <% end %>
+  </div>
+<%= link_to "一覧に戻る", krks_path %>

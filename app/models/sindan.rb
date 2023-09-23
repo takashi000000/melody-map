@@ -1,0 +1,2 @@
+class Sindan < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+module KensaksHelper
+end

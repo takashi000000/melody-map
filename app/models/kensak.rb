@@ -1,0 +1,2 @@
+class Kensak < ApplicationRecord
+end
