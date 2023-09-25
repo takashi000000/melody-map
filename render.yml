@@ -1,0 +1,22 @@
+databases:
+  - name: Melody-Map_DB
+    databaseName: melody_map_db
+    user: Melody Map
+    region: singapore
+
+services:
+  - type: web
+    name: melody Map
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: Melody-Map_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
