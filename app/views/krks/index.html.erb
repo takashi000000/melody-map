@@ -21,10 +21,12 @@
     </a>
     </div>
     <div class="itemE">
+    <% if user_signed_in? %>
     <a href="<%= user_path(current_user.id) %>">
         <%= image_tag "book.jpg", alt: "Description of Image" %>
         <span class="show-text">マイページ</span>
     </a>
+    <% end %>
 </div>
 
     <div class="itemF">
