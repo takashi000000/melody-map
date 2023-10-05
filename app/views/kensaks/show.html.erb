@@ -1,89 +1,293 @@
 <div class="intoro">
 <h5>診断結果</h5>
-<p>あなたにおすすめの香りは…</p>
+<p>あなたにおすすめの歌手は…</p>
 </div>
-<div class="kensak-container">
-<div class="kensak">
+
+
+   
     <% if @kensak.question == "1111" %>
-    <h6>レモン</h6>
-    <p>柑橘系の代表的な原料</p>
-    <p>清涼感があり、爽やかな印象</p>
+    <div class="answer point_box">
+        <div class="box">
+            <div class="title">
+            <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">『NiziU』</span></span>です！</p>
+            </div>
+        <div class="txt">
+            <div class="img">
+            <%= image_tag 'Nizyu.jpg' %></div>
+            <p>おすすめ曲「Make you happy」</p>
+<p>『NiziU（読み方：ニジュー）』は日本のレコード会社・ソニーミュージックと韓国の大手芸能プロダクション・JYPエンターテインメント共同のオーディション番組「Nizi Project（虹プロ）」から生まれた9人組のガールズアイドルグループです。</p>
+           
+        </div>
+        </div>
+    </div>
 
+
+    
     <% elsif @kensak.question == "1112" %>
-    <h6>シトラス</h6>
-    <p>オレンジに似た柑橘系の果物</p>
-    <p>リラックス効果がある</p>
+    <div class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">『orange range』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'orange.jpg' %></div>
+                        <p>おすすめ曲「イケナイ太陽」</p>
+<p>ORANGE RANGE（オレンジ・レンジ）は、沖縄県を拠点に活動する日本の男性5人組ロックバンド。略称はRANGE（レンジ）。所属プロダクションはスパイスミュージック（業務提携先はスターダストプロモーション）。レコード会社は自主レーベル「SUPER((ECHO))LABEL」（業務提携先はJVCケンウッド・ビクターエンタテインメントの社内レーベルSPEEDSTAR RECORDS）。公式ファンクラブは「RANGE AID+」</p>
 
+                  
+                    </div>
+                    </div>
+                </div>
     <% elsif @kensak.question == "1121" %>
-    <h6>ローズ</h6>
-    <p>華やかで上品な香り</p>
-    <p>ストレスを緩和してくれる効果がある</p>
+    <div class="answer point_box">
+    <div class="box">
+        <div class="title">
+        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">『嵐』</span></span>です！</p>
+        </div>
+    <div class="txt">
+        <div class="img">
+        <%= image_tag 'arasi.jpg' %></div>
+        <p>おすすめ曲「Happiness」</p>
+<p>嵐（あらし、英: ARASHI[1]）は、日本の男性アイドルグループ[6]。所属事務所はジャニーズ事務所[1]。所属レコード会社はジェイ・ストーム[7]。2020年12月31日をもってグループとしての活動を休止した</p>
+
+    </div>
+    </div>
+</div>
 
     <% elsif @kensak.question == "1122" %>
-    <h6>ラベンダー</h6>
-    <p>優しく女性らしい香り</p>
-    <p>気持ちを落ち着かせてくれる</p>
+    <div class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「清水翔太」</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'simizu.jpg' %></div>
+                        <p>おすすめ曲「花束の代わりにメロディーを」</p>
+<p>清水 翔太（しみず しょうた、1989年2月27日[1] - ）は、日本のポップ/R&Bシンガーソングライター。作詞作曲のほかアレンジも自身で手掛ける。</p>
+
+                    </div>
+                    </div>
+                </div>
 
     <% elsif @kensak.question == "1211" %>
-    <h6>ジャスミン</h6>
-    <p>爽やかなのに官能的な香り</p>
-    <p>幸福感を得やすい</p>
+    <div class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「GReeeeN」</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'green.jpg' %></div>
+                        <p>おすすめ曲「キセキ」</p>
+<p>GReeeeN（グリーン）は、日本の男性4人組ボーカルグループ。福島県郡山市で結成された。所属レーベルはPolydor Records、所属事務所は株式会社ハイスピードボーイ[4]。歯科医師とアーティストを両立しており、歯科医師の本業に支障を出さないようにするため、顔を一切公表していない。</p>
+
+                    </div>
+                    </div>
+                </div>
 
     <% elsif @kensak.question == "1212" %>
-    <h6>ピーチ</h6>
-    <p>フレッシュで優しい香り</p>
-    <p>アンチエイジングにも最適</p>
+    <div class="answer point_box">
+                    <div class="box">
+                     <div class="title">
+                        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「あいみょん」</span></span>です！</p>
+                     </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'aimyon.jpg' %></div>
+                        <p>おすすめ曲「君はロックを聴かない」</p>
+<p>あいみょん（1995年〈平成7年〉3月6日[4] - ）は、日本のシンガーソングライター[5]。本名は非公開。兵庫県西宮市出身[6]。血液型はO型[7]。所属芸能事務所はエンズエンターテイメント。所属レーベルはワーナーミュージック・ジャパン傘下のunBORDE。</p>
+<p>16年11月にシングル「生きていたんだよな」でメジャーデビュー。 17年5月に2ndシングル「愛を伝えたいだとか」、8月に3rdシングル「君はロックを聴かない」 を発表し、9月にリリースした1stフルアルバム「青春のエキサイトメント」は現在もロングセールスを記録中。</p>
+
+
+                    </div>
+                    </div>
+                </div>
 
     <% elsif @kensak.question == "1221" %>
-    <h6>アップル</h6>
-    <p>特徴的で甘い香り</p>
-    <p>万人受けしやすい</p>
+    <div class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                            <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「Vaundy」</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'vaundy.jpg' %></div>
+                        <p>おすすめ曲「怪獣の花唄」</p>
+<p>作詞・作曲・編曲のみならず、クリエイターと協働してアートワーク制作、映像プロデュースも手掛ける。現役で美術系大学に通いながら活動中。
+
+中学生の頃からCubaseを使用した作曲活動を始める。高校時代にはニコニコ動画にてVOCALOID曲の「歌い手」としての活動も行った[1]。また、麻布十番にある音楽塾ヴォイスに通い、本格的に音楽の勉強を始める[2]。
+
+2020年にSpotifyが今年躍進を期待するネクストブレイクアーティスト10組「Early Noise 2020」に選出[3]、またスペースシャワーネットワークがイチオシの新人を選ぶ「SPACE SHOWER RETSUDEN NEW FORCE」2020年度ラインナップに選出され、注目を集める[4]。
+
+「Vaundy」という自身の名前にも、1stアルバムのタイトル『strobo』にも、敢えて和製英語を用いるのは日本人アーティストとしての矜恃で、海外での活動も視野に入れている。
+
+</p>
+
+                    </div>
+                    </div>
+                </div>
+
 
     <% elsif @kensak.question == "1222" %>
-    <h6>ユーカリ</h6>
-    <p>しっかりとした優しい香り</p>
-    <p>浄化作用があり。気持ちを落ち着かせてくれる</p>
+    <div class="answer point_box">
+    <div class="box">
+        <div class="title">
+        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">『NiziU』</span></span>です！</p>
+        </div>
+    <div class="txt">
+        <div class="img">
+        <%= image_tag 'Nizyu.jpg' %></div>
+        <p>おすすめ曲「Make you happy」</p>
+<p>『NiziU（読み方：ニジュー）』は日本のレコード会社・ソニーミュージックと韓国の大手芸能プロダクション・JYPエンターテインメント共同のオーディション番組「Nizi Project（虹プロ）」から生まれた9人組のガールズアイドルグループです。</p>
+       
+    </div>
+    </div>
+</div>
 
     <% elsif @kensak.question == "2111" %>
-    <h6>ローズマリー</h6>
-    <p>きりりとした強めの香りが特徴的</p>
-    <p>美容効果が高い</p>
+    <div class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">『orange range』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'orange.jpg' %></div>
+                        <p>おすすめ曲「イケナイ太陽」</p>
+<p>ORANGE RANGE（オレンジ・レンジ）は、沖縄県を拠点に活動する日本の男性5人組ロックバンド。略称はRANGE（レンジ）。所属プロダクションはスパイスミュージック（業務提携先はスターダストプロモーション）。レコード会社は自主レーベル「SUPER((ECHO))LABEL」（業務提携先はJVCケンウッド・ビクターエンタテインメントの社内レーベルSPEEDSTAR RECORDS）。公式ファンクラブは「RANGE AID+」</p>
+
+                  
+                    </div>
+                    </div>
+                </div>
 
     <% elsif @kensak.question == "2112" %>
-    <h6>ベルガモット</h6>
-    <p>柑橘系の果実</p>
-    <p>甘くてフレッシュな、万能な香料</p>
+    <% elsif @kensak.question == "1121" %>
+    <div class="answer point_box">
+    <div class="box">
+        <div class="title">
+        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">『嵐』</span></span>です！</p>
+        </div>
+    <div class="txt">
+        <div class="img">
+        <%= image_tag 'arasi.jpg' %></div>
+        <p>おすすめ曲「Happiness」</p>
+<p>嵐（あらし、英: ARASHI[1]）は、日本の男性アイドルグループ[6]。所属事務所はジャニーズ事務所[1]。所属レコード会社はジェイ・ストーム[7]。2020年12月31日をもってグループとしての活動を休止した</p>
 
+    </div>
+    </div>
+</div>
     <% elsif @kensak.question == "2121" %>
-    <h6>ムスク</h6>
-    <p>雄のジャコウジカの腹部にある香嚢から抽出した香料</p>
-    <p>官能的で重い香り</p>
+    <div class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「清水翔太」</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'simizu.jpg' %></div>
+                        <p>おすすめ曲「花束の代わりにメロディーを」</p>
+<p>清水 翔太（しみず しょうた、1989年2月27日[1] - ）は、日本のポップ/R&Bシンガーソングライター。作詞作曲のほかアレンジも自身で手掛ける。</p>
+
+                    </div>
+                    </div>
+                </div>
+
 
     <% elsif @kensak.question == "2122" %>
-    <h6>アンバー</h6>
-    <p>マッコウクジラの結石から抽出した香料</p>
-    <p>魅惑的で色気のある香り</p>
+    <div class="answer point_box">
+    <div class="box">
+        <div class="title">
+        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「GReeeeN」</span></span>です！</p>
+        </div>
+    <div class="txt">
+        <div class="img">
+        <%= image_tag 'green.jpg' %></div>
+        <p>おすすめ曲「キセキ」</p>
+<p>GReeeeN（グリーン）は、日本の男性4人組ボーカルグループ。福島県郡山市で結成された。所属レーベルはPolydor Records、所属事務所は株式会社ハイスピードボーイ[4]。歯科医師とアーティストを両立しており、歯科医師の本業に支障を出さないようにするため、顔を一切公表していない。</p>
+
+    </div>
+    </div>
+</div>
 
     <% elsif @kensak.question == "2211" %>
-    <h6>シナモン</h6>
-    <p>甘いスパイスの香り</p>
-    <p>香水のアクセントとしてよく使われる</p>
+    <div class="answer point_box">
+                    <div class="box">
+                     <div class="title">
+                        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「あいみょん」</span></span>です！</p>
+                     </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'aimyon.jpg' %></div>
+                        <p>おすすめ曲「君はロックを聴かない」</p>
+<p>あいみょん（1995年〈平成7年〉3月6日[4] - ）は、日本のシンガーソングライター[5]。本名は非公開。兵庫県西宮市出身[6]。血液型はO型[7]。所属芸能事務所はエンズエンターテイメント。所属レーベルはワーナーミュージック・ジャパン傘下のunBORDE。</p>
+<p>16年11月にシングル「生きていたんだよな」でメジャーデビュー。 17年5月に2ndシングル「愛を伝えたいだとか」、8月に3rdシングル「君はロックを聴かない」 を発表し、9月にリリースした1stフルアルバム「青春のエキサイトメント」は現在もロングセールスを記録中。</p>
+
+
+                    </div>
+                    </div>
+                </div>
 
     <% elsif @kensak.question == "2212" %>
-    <h6>バニラ</h6>
-    <p>甘くて官能的な香り</p>
-    <p>上品で年齢を問わず人気が高い</p>
+    <div class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                            <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「Vaundy」</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag 'vaundy.jpg' %></div>
+                        <p>おすすめ曲「怪獣の花唄」</p>
+<p>作詞・作曲・編曲のみならず、クリエイターと協働してアートワーク制作、映像プロデュースも手掛ける。現役で美術系大学に通いながら活動中。
+
+中学生の頃からCubaseを使用した作曲活動を始める。高校時代にはニコニコ動画にてVOCALOID曲の「歌い手」としての活動も行った[1]。また、麻布十番にある音楽塾ヴォイスに通い、本格的に音楽の勉強を始める[2]。
+
+2020年にSpotifyが今年躍進を期待するネクストブレイクアーティスト10組「Early Noise 2020」に選出[3]、またスペースシャワーネットワークがイチオシの新人を選ぶ「SPACE SHOWER RETSUDEN NEW FORCE」2020年度ラインナップに選出され、注目を集める[4]。
+
+「Vaundy」という自身の名前にも、1stアルバムのタイトル『strobo』にも、敢えて和製英語を用いるのは日本人アーティストとしての矜恃で、海外での活動も視野に入れている。
+
+</p>
+
+                    </div>
+                    </div>
+                </div>
 
     <% elsif @kensak.question == "2221" %>
-    <h6>イランイラン</h6>
-    <p>色気のある濃厚で甘い香り</p>
-    <p>恋愛に効果があり</p>
+    <div class="answer point_box">
+    <div class="box">
+     <div class="title">
+        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「あいみょん」</span></span>です！</p>
+     </div>
+    <div class="txt">
+        <div class="img">
+        <%= image_tag 'aimyon.jpg' %></div>
+        <p>おすすめ曲「君はロックを聴かない」</p>
+<p>あいみょん（1995年〈平成7年〉3月6日[4] - ）は、日本のシンガーソングライター[5]。本名は非公開。兵庫県西宮市出身[6]。血液型はO型[7]。所属芸能事務所はエンズエンターテイメント。所属レーベルはワーナーミュージック・ジャパン傘下のunBORDE。</p>
+<p>16年11月にシングル「生きていたんだよな」でメジャーデビュー。 17年5月に2ndシングル「愛を伝えたいだとか」、8月に3rdシングル「君はロックを聴かない」 を発表し、9月にリリースした1stフルアルバム「青春のエキサイトメント」は現在もロングセールスを記録中。</p>
+
+
+    </div>
+    </div>
+</div>
 
     <% elsif @kensak.question == "2222" %>
-    <h6>サンダルウッド</h6>
-    <p>お香としてよく使われる白檀の香り</p>
-    <p>集中力を高める効果もあり</p>
+    <div class="answer point_box">
+    <div class="box">
+     <div class="title">
+        <p>あなたに勧める歌手は<span class="fs-18"><span class="bg-y">「あいみょん」</span></span>です！</p>
+     </div>
+    <div class="txt">
+        <div class="img">
+        <%= image_tag 'aimyon.jpg' %></div>
+        <p>おすすめ曲「君はロックを聴かない」</p>
+<p>あいみょん（1995年〈平成7年〉3月6日[4] - ）は、日本のシンガーソングライター[5]。本名は非公開。兵庫県西宮市出身[6]。血液型はO型[7]。所属芸能事務所はエンズエンターテイメント。所属レーベルはワーナーミュージック・ジャパン傘下のunBORDE。</p>
+<p>16年11月にシングル「生きていたんだよな」でメジャーデビュー。 17年5月に2ndシングル「愛を伝えたいだとか」、8月に3rdシングル「君はロックを聴かない」 を発表し、9月にリリースした1stフルアルバム「青春のエキサイトメント」は現在もロングセールスを記録中。</p>
 
-    <% end %>
 
+    </div>
+    </div>
+</div>
+<%end%>
 </div>

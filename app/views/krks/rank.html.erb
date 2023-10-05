@@ -1,8 +1,11 @@
-<p>いいねランキング</p>
+<div class="rankin">
+  <p>いいねランキング</p>
   <% @rank_krks.each do |t| %>
-  
-    <%= t.name %>
-    <%= t.about %>
-  <%= t.likes.count %>
+    <div class="rankin-item">
+      <span class="name"><%= t.name %></span>
+      <span class="about"><%= t.about %></span>
+      <span class="likes-count"><%= t.likes.count %></span>
+    </div>
   <% end %>
-  <%= link_to "Tweet一覧に戻る", krks_path %>
+  <%= link_to "homeに戻る", krks_path, class: 'btn-small' %>
+</div>

@@ -1,0 +1,82 @@
+// インポートするGoogle Fonts
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  
+  // Tweet詳細ページのスタイル
+  .krk {
+      padding: 25px;
+      border: 3px solid #000; // ここを変更
+      margin-bottom: 25px;
+      border-radius: 15px;
+      background-color: #FFFACD; // ここを変更
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      
+      p {
+          font-size: 18px;
+          margin: 10px 0;
+          color: #333;
+      }
+      
+      .liked-icon {
+          color: #e74c3c;
+      }
+      
+      h3 {
+          margin-top: 0;
+          font-size: 24px; // タイトルのフォントサイズを大きく
+      }
+  }
+
+// 編集ボタンのスタイル
+.edit-btn {
+    background-color: #3498db; 
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+// コミック風スタイル
+.comic-style {
+    font-family: 'Patrick Hand', cursive;
+    border: 3px solid #000;
+    padding: 15px;
+    background-color: #FFFACD;
+    margin-bottom: 15px;
+}
+
+.liked-users, .comment-wrapper {
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.liked-user, .comment {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #FFD700;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+// コメントのテキストエリアとボタンのスタイル
+.comment-textarea, .comment-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 16px;
+}

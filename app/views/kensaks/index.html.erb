@@ -1,23 +1,41 @@
-<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
-<html lang="ja"><!--言語の指定-->
-    <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
         <meta charset="utf-8">
-        <title>歌診断スタート</title><!--ブラウザのタブのタイトルを指定-->
+        <title>歌診断スタート</title>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+        <style>
+        .nav-list-item {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .start {
+            margin-top: 30px;
+        }
+
+        .btn {
+            width: 250px;
+            height: 60px;
+        }
+    </style>
     </head>
 
     <body>
-        <header>
-            <h1 class="headline">
-            <a>歌診断スタート</a>
-            </h1>
-            <ul class="nav-list">
-                <li class="nav-list-item">about fragrance</li>
-                <li class="nav-list-item"><%= link_to "診断", kensaks_path, class: "link" %></li>
-            </ul>
-        </header>
-
+    <div class="drive">
+                <h4> ドライブの曲について </h4>
+                </div>
+        
         <div class="start">
-            <h6>Are you ready?</h6>
-            <%= link_to "診断を始める", new_kensak_path, class: "link" %>
+            <div class="hazime">
+                <h6>下のボタンを押して診断を始めよう</h6>
+            </div>
+            <%= link_to new_kensak_path, class: 'btn btn-3d-flip' do %>
+                <span class="btn-3d-flip-box">
+                  <span class="btn-3d-flip-box-face btn-3d-flip-box-face--front">準備はいい？<i class="fas fa-angle-right fa-position-right"></i></span>
+                  <span class="btn-3d-flip-box-face btn-3d-flip-box-face--back">診断スタート！<i class="fas fa-angle-right fa-position-right"></i></span>
+                </span>
+            <% end %>
         </div>
     </body>
+</html>

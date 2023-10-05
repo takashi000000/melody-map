@@ -1,49 +1,52 @@
-<h1>Melodymap</h1>
-<h3>Tweet詳細</h3>
-<div class="krk">
-<p><%= @krk.name %></p>
-<p><%= @krk.about %></p>
-<p><%= @krk.created_at %></p>
-<% if user_signed_in? %>
-      <% if current_user.already_liked?(@krk) %>
-        <%= link_to krk_like_path(@krk), method: :delete do %>
-            <i class="fas fa-heart"></i><%= @krk.likes.count %>
-  
-        <% end %>
-      <% else %>
-        <%= link_to krk_likes_path(@krk), method: :post do %>
-            <i class="far fa-heart"></i><%= @krk.likes.count %>
-         
-        <% end %>
+<div class="krk comic-style">
+  <h3>Tweet詳細</h3>
+  <p><%= @krk.name %></p>
+  <p><%= @krk.about %></p>
+  <p><%= @krk.created_at %></p>
+  <!-- ...他のコードはそのまま... -->
+</div>
+  <% if user_signed_in? %>
+    <% if current_user.already_liked?(@krk) %>
+      <%= link_to krk_like_path(@krk), method: :delete do %>
+        <i class="fas fa-heart liked-icon"></i><%= @krk.likes.count %>
       <% end %>
     <% else %>
-    <i class="far fa-heart"></i><%= @krk.likes.count %>
-    
+      <%= link_to krk_likes_path(@krk), method: :post do %>
+        <i class="far fa-heart"></i><%= @krk.likes.count %>
+      <% end %>
     <% end %>
-  <%= link_to "編集する", edit_krk_path(@krk.id) %>
+  <% else %>
+    <i class="far fa-heart"></i><%= @krk.likes.count %>
+  <% end %>
+  <%= link_to "編集する", edit_krk_path(@krk.id), class: 'edit-btn' %> <!-- Use the CSS class for the edit button -->
 </div>
-<h2>いいねしたユーザー</h2>
-<% @krk.liked_users.each do |user| %>
-  <li><%= user.email %></li>
-<% end %>
-<div class="comment-wrapper">
+<h2 class="comic-style">いいねしたユーザー</h2>
+<div class="liked-users">
+  <% @krk.liked_users.each do |user| %>
+    <div class="liked-user">
+      <%= user.email %>
+    </div>
+  <% end %>
+</div>
+
+<div class="comment-wrapper comic-style">
   <p>コメント一覧</p>
   <% @comments.each do |c| %>
-    <div>
-      <%= c.user.email unless c.user.blank? %>
-      <br>
+    <div class="comment">
+      <div class="comment-user">
+        <%= c.user.email unless c.user.blank? %>
+      </div>
       <%= c.content %>
     </div>
-      <br>
   <% end %>
-
   <% if user_signed_in? %>
     <%= form_with(model: [@krk, @comment], local: true) do |f| %>
-      <%= f.text_area :content %>
-      <%= button_tag type: "submit" do %>
+      <%= f.text_area :content, class: 'comment-textarea' %>
+      <%= button_tag type: "submit", class: 'comment-btn' do %>
         <i class="far fa-comments"></i> コメントする
       <% end %>
     <% end %>
   <% end %>
 </div>
-<%= link_to "Tweet一覧に戻る", krks_path %>
+
+<%= link_to "Tweet一覧に戻る", new_krk_path, class: 'back-btn' %> <!-- Add a CSS class for the back button -->

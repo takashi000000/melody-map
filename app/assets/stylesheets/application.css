@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
- header {
+ 
+ #special-header {
     background: linear-gradient(180deg, #961DA0 0%, rgba(109, 164, 151, 0.55) 66.15%, rgba(109, 164, 151, 0.54) 99.99%, rgba(109, 164, 151, 0.00) 100%);
     position: fixed;
     height: 110px;
@@ -44,3 +45,58 @@ line-height: 44px; /* 97.778% */
 main {
     margin-top: 110px; /* ヘッダーの高さと同じマージンを設定 */
 }
+
+#normal-header {
+    width: 1450px;
+    height: 116px;
+    flex-shrink: 0;
+    background: #FBBABA;
+}
+header h2 {
+    display: flex;
+    width: 1400px;
+    height: 116px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #632564;
+    text-align: center;
+    font-family: Irish Grover;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px; /* 97.778% */
+}
+
+/* stylesheets/application.scss または stylesheets/index.scss などのファイルに追加 */
+.login-link, .signup-link {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FFB6C1; /* ピンク色 */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-link:hover, .signup-link:hover {
+    background-color: #FF69B4; /* 濃いピンク色 */
+  }
+  /* stylesheets/application.scss または stylesheets/index.scss などのファイルに追加 */
+.logout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ADD8E6; /* ライトブルー色 */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+  
+  .logout-btn:hover {
+    background-color: #87CEEB; /* 濃いブルー色 */
+  }
+  

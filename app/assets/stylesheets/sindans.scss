@@ -24,31 +24,29 @@ body {
 .wf-mplus1p { font-family: "Mplus 1p"; }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+// 全体の設定
+* {
+  font-family: 'Comic Neue', cursive;
+  color: #2b2b2b;
+}
+
+// ヘッダー
 #commonHeader {
-    position: relative;
-    margin: 0 auto;
-  
-    
-    color: #5391BA;
-    font-weight: bold;
-    text-align: center;
-    padding: 0.25em;
-    border-top: solid 2px #6cb4e4;
-    border-bottom: solid 2px #6cb4e4;
-    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
-    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
-
+  color: #ff4500;
+  border-top: solid 4px #ffd700;
+  border-bottom: solid 4px #ffd700;
+  background: linear-gradient(to bottom right, #ffe4b5, #ffdead);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
+// セクション
 #commonHeader section#flows {
-    margin: 0 auto;
-    max-height: 170px;
-    position: relative;
-    
-    font-size: 360%;
-    text-align: center;
-    padding:5px 5px 30px;
-
+  font-size: 400%;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
 }
+
 
 #flowsHead{
     font-size: 100%;
@@ -101,12 +99,11 @@ article:after, section:after, .clrFx:after {
     margin-bottom: 1em;
 }
 .hsd_question_txt {
-    padding: 8px 10px 0px 12px;
-    font-size: 25px;
-    color: #282828;
-    text-align: center;
-    font-family: "游明朝", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
-}
+    font-size: 30px;
+    color: #4169e1;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+  
 .hds_answer {
     position: relative;
     overflow: hidden;
@@ -152,6 +149,7 @@ article:after, section:after, .clrFx:after {
 .qabox{
     width:300px;
     margin: 0 auto;
+    margin-top: 30px; // 上部に10ピクセルのマージンを追加
 }
 
 .question {
@@ -174,10 +172,27 @@ article:after, section:after, .clrFx:after {
 }
 
 
+// ボタンスタイル
 .qabtn {
-    position: relative;
-
-}
+    border: none;
+    background-color: #ff4500; // 初期の背景色
+    padding: 10px 20px;
+    border-radius: 0; // 四角形のボタン
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); // 立体感を出すためのボックスシャドウ
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; // 背景色とボックスシャドウのトランジション
+  
+    // ホバー時のスタイル
+    &:hover {
+      background-color: #ffd700; // ホバー時の背景色
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); // ホバー時のボックスシャドウ
+    }
+  
+    // アクティブ時のスタイル
+    &:active {
+      box-shadow: none; // アクティブ時はボックスシャドウをなくす
+    }
+  }
+  
 .qabtn::before,
 .qabtn::after {
   position: absolute;
@@ -204,30 +219,38 @@ article:after, section:after, .clrFx:after {
     margin-right:30px;
 }
 
-.btnBox{
-    text-align:center;
-    width: 90px;
-    float: left;
-    height: 90px;
-    padding: 20px;
-    border-radius: 90px;
-    cursor :pointer;
-    
-    color: #fff;
-    font-size:150%;
-    line-height: 90px;
-    
-    margin-top:30px;
-}
-
-.btnBox_y{
-    background-color: #FF8DB4;
-    margin-right: 40px;
-}
-
-.btnBox_n{
-    background-color: #62D7DE;
-}
+// ボタンスタイル
+.qabtn .btnBox {
+    border: none;
+    background-color: #ff4500; // 初期の背景色
+    padding: 10px 20px;
+    border-radius: 0; // 四角形のボタン
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); // 立体感を出すためのボックスシャドウ
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; // 背景色とボックスシャドウのトランジション
+    display: inline-block; // インラインブロック要素にする
+  
+    // ホバー時のスタイル
+    &:hover {
+      background-color: #ffd700; // ホバー時の背景色
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); // ホバー時のボックスシャドウ
+    }
+  
+    // アクティブ時のスタイル
+    &:active {
+      box-shadow: none; // アクティブ時はボックスシャドウをなくす
+    }
+  
+    // YESボタン
+    &.btnBox_y {
+      background-color: #4CAF50; // YESボタンの初期の背景色
+    }
+  
+    // NOボタン
+    &.btnBox_n {
+      background-color: #f44336; // NOボタンの初期の背景色
+    }
+  }
+  
 
 .btnBox_x{
     background-color: #94FF99;

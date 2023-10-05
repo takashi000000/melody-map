@@ -1,0 +1,42 @@
+<html lang="ja"><!--言語の指定-->
+  <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+    <meta charset="utf-8">
+    <title>Melody</title>
+    <link rel="stylesheet" href="./stylesheets/index.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/45c3850352.js"  crossorigin="anonymous"></script> 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  
+  <header id="special-header">
+  <h1>Melody Map</h1>
+  <div class="header-list">
+  <ul style="margin-left: auto;"> 
+    
+      <li><a href="#itemC">about</a></li>
+      <li><a href="#itemG">analysis</a></li>
+      <li><a href="#itemH">tweet</a></li>
+      <% if user_signed_in? %>
+      <!-- app/views/layouts/application.html.erb -->
+      <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'logout-btn' %></li>
+      
+      <% else %>
+      <!-- app/views/layouts/application.html.erb -->
+      <li><%= link_to "新規登録", new_user_registration_path, class: 'signup-link' %></li>
+      <li><%= link_to "ログイン", new_user_session_path, class: 'login-link' %></li>
+      
+      <% end %>
+    </ul>
+  </div>
+</header>
+  
+<main>
+  <%= yield %>
+</main>
+
+  </body>
+</html>

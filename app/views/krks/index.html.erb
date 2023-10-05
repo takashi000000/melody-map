@@ -1,8 +1,9 @@
-<body>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
 
+  <head>
+<link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+  </head>
+<body>
   <div class="container"> 
   <div class="itemA">
      <div class="inner-box">
@@ -10,7 +11,7 @@
      </div>
   </div>
     <div class="itemB">areaB</div>
-    <div class="itemC">
+    <div class="itemC" id="itemC">
     <p class="about-text">「Melody Map」の診断機能で、あなたにぴったりのカラオケやドライブ曲を見つけよう。 歌った楽曲はすぐにツイートでき、大切な曲の思い出を簡単に記録。曲選びで迷ったときも、すでに歌った曲を忘れそうなときも、当サイトがあなたの歌声と思い出をサポートします。</p>
     <p class="text-left-top">about</p>
     </div>
@@ -32,14 +33,23 @@
     <div class="itemF">
       <a href="<%= kensaks_path %>">
           <%= image_tag "car-1957037_1280.jpg", alt: "Description of Image" %>
+          <span class="kensak-text">診断機能2</span>
       </a>
       <div class="A-box">
-        <p>"ドライブの曲を選ぼう！"</p>
+        <p>ドライブの曲を選ぼう！</p>
      </div>
     </div>
 
-    <div class="itemG">areaG</div>
-    <div class="itemH">
+    <div class="itemG" id="itemG">
+    <a href="<%= sindans_path %>">
+          <%= image_tag "mic-6127818_1280.jpg", alt: "Description of Image" %>
+          <span class="sindan-text">診断機能1</span>
+      </a>
+      <div class="G-box">
+        <p>カラオケの曲を選ぼう！</p>
+     </div>
+    </div>
+    <div class="itemH" id="itemH">
     <p class="description-text">投稿サイトへ👇</p>
     
     <%= link_to new_krk_path, class: "btn btn-flat" do %>
@@ -48,54 +58,6 @@
     <% end %>
     </div>
   </div>
-  
-  <% if user_signed_in? %>
-    <%= link_to "マイページへ", user_path(current_user.id) %>
-  <% end %>
-  
-  <%= link_to '診断ページ', sindans_path %>
-  <%= link_to '診断ページ2', kensaks_path %>
-  <!-- 
-  <%= link_to krks_rank_path do %>
-    <%= image_tag 'ranking.jpg', class:"logo-image" %>
-  <% end %>
-  -->
-  <!-- 
-  <div class="krks-container">
-    <% @krks.each do |t| %>
-      <div class="krk">
-      <%= image_tag t.image_url, size: "10x10" if t.image? %>
-      <%= t.user.email %>
-        <%= t.name %>
-        <%= t.genre %>
-        <%= t.about %>
-
-        <% if user_signed_in? && current_user.id == t.user_id %>
-        <%= link_to "編集する", edit_krk_path(t.id) %>
-        <%= link_to "削除する", krk_path(t.id), method: :delete %>
-        <% end %> 
-      
-        <% if user_signed_in? %>
-          <% if current_user.already_liked?(t) %>
-              <%= link_to krk_like_path(id: t.id, krk_id: t.id), method: :delete do %>
-                <i class="fas fa-heart"></i><%= t.likes.count %>
-              <% end %>
-          <% else %>
-              <%= link_to krk_likes_path(id: t.id, krk_id: t.id), method: :post do %>
-                <i class="far fa-heart"></i><%= t.likes.count %>
-              <% end %>
-          <% end %>
-        <% else %>
-          <i class="far fa-heart"></i><%= t.likes.count %>
-        <% end %>
-        <%= t.created_at %>
-        <%= link_to "詳細へ", krk_path(t.id) %>
-        <%= link_to "編集する", edit_krk_path(t.id) %>
-        <%= button_to "削除する", krk_path(t.id), method: :delete %> 
-      </div>
-    <% end %>
-  </div>
-  -->
 
   <footer>  
     <small>© 2023 松前昂志</small>

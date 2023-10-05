@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Melody</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/45c3850352.js"  crossorigin="anonymous"></script> 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <header id="normal-header">
+  <h2><%= link_to "Melody Map", root_path %></h2>
+  <div class="header-list">
+  
+      <div class="subheader-list">
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>
