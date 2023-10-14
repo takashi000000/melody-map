@@ -6,7 +6,7 @@ databases:
 
 services:
   - type: web
-    name: melody Map
+    name: melody_Map
     env: ruby
     region: singapore
     plan: free
